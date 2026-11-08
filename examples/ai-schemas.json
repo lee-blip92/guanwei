@@ -1,0 +1,264 @@
+{
+  "extraction": {
+    "$defs": {
+      "Feedback": {
+        "additionalProperties": false,
+        "properties": {
+          "evidence_id": {
+            "title": "Evidence Id",
+            "type": "string"
+          },
+          "relevance": {
+            "enum": [
+              "target",
+              "other_product",
+              "irrelevant",
+              "uncertain"
+            ],
+            "title": "Relevance",
+            "type": "string"
+          },
+          "reason": {
+            "maxLength": 800,
+            "minLength": 1,
+            "title": "Reason",
+            "type": "string"
+          },
+          "suspected_ad": {
+            "title": "Suspected Ad",
+            "type": "boolean"
+          },
+          "sentiment": {
+            "enum": [
+              "positive",
+              "negative",
+              "mixed",
+              "neutral",
+              "unknown"
+            ],
+            "title": "Sentiment",
+            "type": "string"
+          },
+          "themes": {
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 5,
+            "title": "Themes",
+            "type": "array"
+          },
+          "scenario": {
+            "maxLength": 300,
+            "title": "Scenario",
+            "type": "string"
+          },
+          "feedback": {
+            "maxLength": 800,
+            "title": "Feedback",
+            "type": "string"
+          },
+          "quote": {
+            "maxLength": 2000,
+            "title": "Quote",
+            "type": "string"
+          }
+        },
+        "required": [
+          "evidence_id",
+          "relevance",
+          "reason",
+          "suspected_ad",
+          "sentiment",
+          "themes",
+          "scenario",
+          "feedback",
+          "quote"
+        ],
+        "title": "Feedback",
+        "type": "object"
+      }
+    },
+    "additionalProperties": false,
+    "properties": {
+      "items": {
+        "items": {
+          "$ref": "#/$defs/Feedback"
+        },
+        "title": "Items",
+        "type": "array"
+      }
+    },
+    "required": [
+      "items"
+    ],
+    "title": "Extraction",
+    "type": "object"
+  },
+  "grouping": {
+    "$defs": {
+      "ThemeGroup": {
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "maxLength": 60,
+            "minLength": 1,
+            "title": "Name",
+            "type": "string"
+          },
+          "member_labels": {
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1,
+            "title": "Member Labels",
+            "type": "array"
+          }
+        },
+        "required": [
+          "name",
+          "member_labels"
+        ],
+        "title": "ThemeGroup",
+        "type": "object"
+      }
+    },
+    "additionalProperties": false,
+    "properties": {
+      "groups": {
+        "items": {
+          "$ref": "#/$defs/ThemeGroup"
+        },
+        "title": "Groups",
+        "type": "array"
+      }
+    },
+    "required": [
+      "groups"
+    ],
+    "title": "Grouping",
+    "type": "object"
+  },
+  "narrative": {
+    "$defs": {
+      "Claim": {
+        "additionalProperties": false,
+        "properties": {
+          "text": {
+            "maxLength": 1000,
+            "minLength": 1,
+            "title": "Text",
+            "type": "string"
+          },
+          "evidence_ids": {
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 20,
+            "minItems": 1,
+            "title": "Evidence Ids",
+            "type": "array"
+          }
+        },
+        "required": [
+          "text",
+          "evidence_ids"
+        ],
+        "title": "Claim",
+        "type": "object"
+      }
+    },
+    "additionalProperties": false,
+    "properties": {
+      "findings": {
+        "items": {
+          "$ref": "#/$defs/Claim"
+        },
+        "maxItems": 8,
+        "title": "Findings",
+        "type": "array"
+      },
+      "positives": {
+        "items": {
+          "$ref": "#/$defs/Claim"
+        },
+        "maxItems": 8,
+        "title": "Positives",
+        "type": "array"
+      },
+      "recommendations": {
+        "items": {
+          "$ref": "#/$defs/Claim"
+        },
+        "maxItems": 8,
+        "title": "Recommendations",
+        "type": "array"
+      },
+      "questions": {
+        "items": {
+          "$ref": "#/$defs/Claim"
+        },
+        "maxItems": 8,
+        "title": "Questions",
+        "type": "array"
+      }
+    },
+    "required": [
+      "findings",
+      "positives",
+      "recommendations",
+      "questions"
+    ],
+    "title": "Narrative",
+    "type": "object"
+  },
+  "support_check": {
+    "$defs": {
+      "SupportVerdict": {
+        "additionalProperties": false,
+        "properties": {
+          "claim_id": {
+            "title": "Claim Id",
+            "type": "string"
+          },
+          "verdict": {
+            "enum": [
+              "supported",
+              "unsupported",
+              "uncertain"
+            ],
+            "title": "Verdict",
+            "type": "string"
+          },
+          "reason": {
+            "maxLength": 800,
+            "minLength": 1,
+            "title": "Reason",
+            "type": "string"
+          }
+        },
+        "required": [
+          "claim_id",
+          "verdict",
+          "reason"
+        ],
+        "title": "SupportVerdict",
+        "type": "object"
+      }
+    },
+    "additionalProperties": false,
+    "properties": {
+      "items": {
+        "items": {
+          "$ref": "#/$defs/SupportVerdict"
+        },
+        "title": "Items",
+        "type": "array"
+      }
+    },
+    "required": [
+      "items"
+    ],
+    "title": "SupportCheck",
+    "type": "object"
+  }
+}

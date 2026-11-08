@@ -1,0 +1,194 @@
+# Sift Configuration
+
+sources:
+    # Reddit is intentionally muted until API approval lands.
+    disabled_sources:
+        - "reddit"
+    default_sources:
+        - "g2"
+        - "app_store"
+        - "play_store"
+        - "youtube"
+        - "hacker_news"
+        - "github_issues"
+        - "product_hunt"
+        - "stack_overflow"
+        - "dev_to"
+        - "support_forums"
+        - "changelogs"
+        - "discord_exports"
+        - "linkedin_comments"
+
+# Three-layer content disambiguator: heuristics (L1) -> anchor similarity (L2)
+# -> LLM yes/no gate (L3). Only the commonly-tuned knobs are shown; every other
+# field falls back to its dataclass default in sift/config.py:DisambiguatorConfig.
+disambiguator:
+    enabled: true
+    llm_gate_enabled: true
+    llm_gate_max_items: 50
+    heuristic_hard_reject: 0.10
+    anchor_min_similarity: 0.35
+
+products:
+    Droid:
+        aliases:
+            - "Factory Droid"
+            - "Droid coding agent"
+            - "Factory's Droid"
+        negative_terms:
+            - "Android"
+            - "Android OS"
+            - "phone"
+            - "APK"
+            - "mobile"
+        category: "AI coding agent"
+        description: "Factory's autonomous coding agent for software development"
+        website: "factory.ai"
+        slugs:
+            - "droid"
+    OpenCode:
+        aliases:
+            - "opencode"
+            - "OpenCode AI"
+            - "OpenCode coding agent"
+        negative_terms:
+            - "Anthropic pricing"
+            - "Claude pricing"
+            - "API prices"
+            - "token prices"
+        category: "AI coding agent"
+        description: "terminal-based open source coding agent for software development"
+    Codex:
+        aliases:
+            - "OpenAI Codex"
+            - "Codex CLI"
+            - "Codex coding agent"
+        negative_terms:
+            - "manuscript"
+            - "ancient text"
+            - "book"
+        category: "AI coding agent"
+        description: "OpenAI coding agent and CLI for software development"
+
+reddit:
+    subreddits:
+        - "SaaS"
+        - "productivity"
+        - "startups"
+        - "software"
+        - "AskReddit"
+    search_sort: "relevance"
+    max_posts: 30
+    max_comments_per_post: 15
+    # Rate limiting (Reddit API: 100 QPM / 1000 per 10 min for OAuth)
+    # We target 80 req/min to leave generous headroom for PRAW internal calls
+    target_rate_per_minute: 80
+    # PRAW auto-waits up to this many seconds on Reddit rate limit errors
+    praw_ratelimit_seconds: 300
+    # Delay between subreddit searches (seconds)
+    subreddit_delay: 2.0
+
+g2:
+    request_delay: 2.5
+    max_pages: 5
+    user_agent_rotation: true
+    # Rate limiting (G2: no official API, Cloudflare + Akamai protection)
+    # Safe threshold: ~10-15 req/min with delays + UA rotation
+    max_requests_per_minute: 12
+    backoff_base: 2.0
+    max_backoff: 60.0
+    max_retries: 3
+    jitter_range: [0.5, 1.5]
+    # Fall back to Playwright (real Chromium) when curl_cffi gets 403
+    use_playwright_fallback: true
+
+app_store:
+    # Map product names to Apple numeric app IDs, e.g. "Notion": "1232780281"
+    app_ids: {}
+    countries: ["us"]
+    max_pages: 1
+    max_items: 50
+    request_delay: 1.0
+    max_requests_per_minute: 30
+
+play_store:
+    # Map product names to Android package names, e.g. "Notion": "notion.id"
+    package_names: {}
+    countries: ["us"]
+    languages: ["en"]
+    max_items: 50
+    request_delay: 1.0
+    max_requests_per_minute: 20
+
+youtube:
+    # Set YOUTUBE_API_KEY in .env and map product names to relevant video IDs.
+    video_ids: {}
+    max_videos: 5
+    max_comments_per_video: 50
+    order: "relevance"
+
+hacker_news:
+    max_items: 50
+    tags: "comment,story"
+    request_delay: 1.0
+    max_requests_per_minute: 30
+
+github_issues:
+    # Optional: set GITHUB_TOKEN in .env for higher rate limits.
+    # Map product names to owner/repo strings, e.g. "VS Code": ["microsoft/vscode"]
+    repos: {}
+    max_items: 50
+    request_delay: 1.0
+    max_requests_per_minute: 30
+
+product_hunt:
+    # Optional map when Product Hunt slug differs from product name.
+    slugs: {}
+    max_items: 50
+    request_delay: 2.0
+    max_requests_per_minute: 20
+    # Fall back to Playwright (real Chromium) when curl_cffi gets 403
+    use_playwright_fallback: true
+
+support_forums:
+    # URL templates can use {query} or {product}, e.g. "https://community.example.com/search?q={query}"
+    search_urls: []
+    max_items: 50
+    request_delay: 1.0
+    max_requests_per_minute: 20
+
+changelogs:
+    # Map product names to changelog URLs, e.g. "Linear": ["https://linear.app/changelog"]
+    urls: {}
+    search_urls: []
+    max_items: 50
+    request_delay: 1.0
+    max_requests_per_minute: 20
+
+discord_exports:
+    # Public Discord exports are ingested from JSON files/URLs when provided.
+    paths: []
+    urls: []
+    max_items: 100
+
+linkedin_comments:
+    # LinkedIn is not scraped directly; provide public/exported comment JSON files/URLs.
+    paths: []
+    urls: []
+    max_items: 100
+
+clustering:
+    embedding_model: "all-MiniLM-L12-v2"
+    umap_n_neighbors: 15
+    umap_n_components: 5
+    hdbscan_min_cluster_size: 3
+    hdbscan_min_samples: 1
+
+llm:
+    model: "deepseek-v4-flash"
+    temperature: 0.3
+    max_tokens: 8000
+
+logging:
+    level: "ERROR"
+    format: "%(asctime)s [%(name)s] %(levelname)s: %(message)s"

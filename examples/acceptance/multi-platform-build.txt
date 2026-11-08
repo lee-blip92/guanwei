@@ -1,0 +1,13 @@
+
+> feedback-insight-workbench@0.1.0 build
+> tsc --noEmit && vite build
+
+vite v6.4.5 building for production...
+transforming...
+✓ 1579 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.52 kB │ gzip:  0.39 kB
+dist/assets/index-CzN8dapB.css   40.77 kB │ gzip:  9.49 kB
+dist/assets/index-Bj1dpXEg.js   207.74 kB │ gzip: 64.60 kB
+✓ built in 1.56s

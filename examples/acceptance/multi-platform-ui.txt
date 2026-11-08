@@ -1,0 +1,5 @@
+
+> feedback-insight-workbench@0.1.0 test:ui
+> node tests/ui-smoke.mjs
+
+PASS: 7-platform selection, sort capabilities, per-platform budgets, settings, comments/context, exclude/restore, reanalysis, report/evidence/export links, platform filter and report distribution (jsdom + local API)

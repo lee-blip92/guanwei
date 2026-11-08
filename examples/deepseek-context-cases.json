@@ -1,0 +1,187 @@
+{
+  "checked_at": "2026-10-29T16:29:38.712076+00:00",
+  "model": "deepseek-v4-pro",
+  "actual_model_call": true,
+  "source": "synthetic_engineering_fixtures_not_real_comments",
+  "quality_metric": null,
+  "note": "这是固定边界用例检查，不代表真实用户反馈的准确率或召回率。",
+  "cases": [
+    {
+      "evidence_id": "fixture:short",
+      "text": "我也是",
+      "note_title": "飞书上手体验",
+      "note_body": "讨论飞书使用体验",
+      "parent_text": "飞书权限设置入口太复杂，第一次用找不到。",
+      "expected_relevance": "target",
+      "expected_sentiment": "negative"
+    },
+    {
+      "evidence_id": "fixture:worse",
+      "text": "更新后更严重",
+      "note_title": "飞书电脑端更新体验",
+      "note_body": "讨论飞书电脑端使用体验",
+      "parent_text": "飞书最近打开文档经常卡顿和闪退。",
+      "expected_relevance": "target",
+      "expected_sentiment": "negative"
+    },
+    {
+      "evidence_id": "fixture:other",
+      "text": "钉钉的通知太吵了",
+      "note_title": "飞书与钉钉对比",
+      "note_body": "笔记同时讨论飞书和钉钉",
+      "parent_text": "",
+      "expected_relevance": "other_product"
+    },
+    {
+      "evidence_id": "fixture:ambiguous",
+      "text": "这个确实不太好用",
+      "note_title": "飞书与钉钉对比",
+      "note_body": "笔记同时讨论飞书和钉钉，没有具体指代",
+      "parent_text": "",
+      "expected_relevance": "uncertain"
+    },
+    {
+      "evidence_id": "fixture:other-reply",
+      "text": "我也是",
+      "note_title": "飞书与钉钉对比",
+      "note_body": "笔记同时讨论飞书和钉钉",
+      "parent_text": "钉钉的通知太吵了，我关掉了。",
+      "expected_relevance": "other_product"
+    },
+    {
+      "evidence_id": "fixture:ad",
+      "text": "飞书会员代充，加微优惠，私信购买。",
+      "note_title": "飞书使用体验",
+      "note_body": "飞书办公协作",
+      "parent_text": "",
+      "expected_relevance": "target",
+      "expected_ad": true
+    }
+  ],
+  "outputs": [
+    {
+      "evidence_id": "fixture:short",
+      "relevance": "target",
+      "reason": "当前评论“我也是”是对父评论“飞书权限设置入口太复杂，第一次用找不到。”的附和，父评论明确提及飞书，因此当前评论与目标产品飞书相关。",
+      "suspected_ad": false,
+      "sentiment": "negative",
+      "themes": [
+        "权限设置",
+        "易用性"
+      ],
+      "scenario": "未知",
+      "feedback": "用户附和父评论，表示自己也遇到飞书权限设置入口复杂、难以找到的问题。",
+      "quote": "我也是"
+    },
+    {
+      "evidence_id": "fixture:worse",
+      "relevance": "target",
+      "reason": "当前评论“更新后更严重”是对父评论“飞书最近打开文档经常卡顿和闪退。”的回应，父评论明确提及飞书，因此当前评论与目标产品飞书相关。",
+      "suspected_ad": false,
+      "sentiment": "negative",
+      "themes": [
+        "卡顿",
+        "闪退",
+        "更新问题"
+      ],
+      "scenario": "未知",
+      "feedback": "用户表示更新后飞书打开文档卡顿和闪退的问题更加严重。",
+      "quote": "更新后更严重"
+    },
+    {
+      "evidence_id": "fixture:other",
+      "relevance": "other_product",
+      "reason": "当前评论“钉钉的通知太吵了”明确提及钉钉，而非目标产品飞书，因此相关性为其他产品。",
+      "suspected_ad": false,
+      "sentiment": "negative",
+      "themes": [
+        "通知管理"
+      ],
+      "scenario": "未知",
+      "feedback": "用户抱怨钉钉的通知过于吵闹。",
+      "quote": "钉钉的通知太吵了"
+    },
+    {
+      "evidence_id": "fixture:ambiguous",
+      "relevance": "uncertain",
+      "reason": "当前评论“这个确实不太好用”没有明确指代对象，笔记标题和正文同时讨论飞书和钉钉，无法确定评论针对哪个产品，因此相关性不确定。",
+      "suspected_ad": false,
+      "sentiment": "negative",
+      "themes": [
+        "易用性"
+      ],
+      "scenario": "未知",
+      "feedback": "用户表示某个产品确实不太好用，但未指明具体产品。",
+      "quote": "这个确实不太好用"
+    },
+    {
+      "evidence_id": "fixture:other-reply",
+      "relevance": "other_product",
+      "reason": "当前评论“我也是”是对父评论“钉钉的通知太吵了，我关掉了。”的附和，父评论明确提及钉钉，因此当前评论与钉钉相关，而非目标产品飞书。",
+      "suspected_ad": false,
+      "sentiment": "negative",
+      "themes": [
+        "通知管理"
+      ],
+      "scenario": "未知",
+      "feedback": "用户附和父评论，表示自己也觉得钉钉的通知太吵并关掉了通知。",
+      "quote": "我也是"
+    },
+    {
+      "evidence_id": "fixture:ad",
+      "relevance": "target",
+      "reason": "当前评论“飞书会员代充，加微优惠，私信购买。”明确提及飞书，属于与飞书相关的推广信息，因此相关性为目标产品，但疑似广告。",
+      "suspected_ad": true,
+      "sentiment": "neutral",
+      "themes": [
+        "会员代充",
+        "广告"
+      ],
+      "scenario": "未知",
+      "feedback": "评论为飞书会员代充的广告，提供加微信优惠购买渠道。",
+      "quote": "飞书会员代充，加微优惠，私信购买。"
+    }
+  ],
+  "checks": [
+    {
+      "evidence_id": "fixture:short",
+      "relevance_pass": true,
+      "quote_pass": true,
+      "sentiment_pass": true,
+      "passed": true
+    },
+    {
+      "evidence_id": "fixture:worse",
+      "relevance_pass": true,
+      "quote_pass": true,
+      "sentiment_pass": true,
+      "passed": true
+    },
+    {
+      "evidence_id": "fixture:other",
+      "relevance_pass": true,
+      "quote_pass": true,
+      "passed": true
+    },
+    {
+      "evidence_id": "fixture:ambiguous",
+      "relevance_pass": true,
+      "quote_pass": true,
+      "passed": true
+    },
+    {
+      "evidence_id": "fixture:other-reply",
+      "relevance_pass": true,
+      "quote_pass": true,
+      "passed": true
+    },
+    {
+      "evidence_id": "fixture:ad",
+      "relevance_pass": true,
+      "quote_pass": true,
+      "ad_pass": true,
+      "passed": true
+    }
+  ],
+  "all_passed": true
+}

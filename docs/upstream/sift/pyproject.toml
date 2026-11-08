@@ -1,0 +1,61 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "getsift"
+version = "0.1.0"
+description = "Scrape, cluster, and analyze product feedback from public channels"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [
+    { name = "Harshit Singh", email = "harshit.singh.work@outlook.com" },
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Information Technology",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Testing",
+    "Topic :: Text Processing :: Linguistic",
+]
+dependencies = [
+    "praw>=7.0",
+    "beautifulsoup4>=4.12",
+    "requests>=2.31",
+    "sentence-transformers>=3.0",
+    "umap-learn>=0.5",
+    "hdbscan>=0.8",
+    "openai>=1.0",
+    "click>=8.0",
+    "pyyaml>=6.0",
+    "python-dotenv>=1.0",
+    "rich>=13.0",
+    "curl_cffi>=0.7",
+    "playwright>=1.40",
+]
+
+[project.urls]
+Homepage = "https://github.com/Gitter09/sift"
+Repository = "https://github.com/Gitter09/sift"
+Issues = "https://github.com/Gitter09/sift/issues"
+Changelog = "https://github.com/Gitter09/sift/blob/main/CHANGELOG.md"
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+sift = "sift.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["sift", "sift.*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

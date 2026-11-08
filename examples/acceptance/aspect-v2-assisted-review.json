@@ -1,0 +1,276 @@
+{
+  "method": "assistant_source_review_not_independent_human_gold",
+  "task_id": "d35989cf-89cd-4198-bd02-10383a115bb1",
+  "reviewed_count": 5,
+  "raw_text_modified": false,
+  "records": [
+    {
+      "evidence_id": "xhs:6ae2d9c80000000013008f6e",
+      "text": "今天重置，这个给dot发短信不是确定的更新公告而且这个功能早就有了，这个点tibo没有明确说今天什么公告，那就是重置，以往都是这个套路",
+      "parent_text": null,
+      "before": [
+        {
+          "product_scope": "target",
+          "aspect": "重置预测",
+          "topic": "预测今天会重置",
+          "kind": "experience",
+          "sentiment": "neutral",
+          "basis": "direct",
+          "scenario": null,
+          "pain_point": null,
+          "impact": null,
+          "expected_outcome": null,
+          "keywords": [
+            "重置预测",
+            "重置"
+          ],
+          "quote": "今天重置",
+          "context_quote": null
+        },
+        {
+          "product_scope": "target",
+          "aspect": "功能更新",
+          "topic": "给Dot发短信功能早已存在,不是确定的更新公告",
+          "kind": "experience",
+          "sentiment": "negative",
+          "basis": "direct",
+          "scenario": null,
+          "pain_point": null,
+          "impact": null,
+          "expected_outcome": null,
+          "keywords": [
+            "Dot发短信",
+            "功能更新",
+            "旧功能"
+          ],
+          "quote": "这个给dot发短信不是确定的更新公告而且这个功能早就有了",
+          "context_quote": null
+        }
+      ],
+      "after": [
+        {
+          "product_scope": "uncertain",
+          "aspect": "重置预测",
+          "topic": "预测今天会重置",
+          "kind": "experience",
+          "sentiment": "neutral",
+          "basis": "direct",
+          "scenario": null,
+          "pain_point": null,
+          "impact": null,
+          "expected_outcome": null,
+          "keywords": [
+            "重置预测",
+            "重置"
+          ],
+          "quote": "今天重置",
+          "context_quote": null
+        },
+        {
+          "product_scope": "uncertain",
+          "aspect": "功能更新",
+          "topic": "给Dot发短信功能早已存在,不是确定的更新公告",
+          "kind": "experience",
+          "sentiment": "negative",
+          "basis": "direct",
+          "scenario": null,
+          "pain_point": null,
+          "impact": null,
+          "expected_outcome": null,
+          "keywords": [
+            "Dot发短信",
+            "功能更新",
+            "旧功能"
+          ],
+          "quote": "这个给dot发短信不是确定的更新公告而且这个功能早就有了",
+          "context_quote": null
+        }
+      ],
+      "reason": "助手核查：评论混合重置预测与 Dot 短信资讯，没有明确的 Codex 使用体验；目标归属待确认。"
+    },
+    {
+      "evidence_id": "xhs:6ae2e61d000000001303fa90",
+      "text": "国内手机号也能发吗",
+      "parent_text": null,
+      "before": [
+        {
+          "product_scope": "target",
+          "aspect": "短信功能",
+          "topic": "国内手机号能否发短信",
+          "kind": "question",
+          "sentiment": "neutral",
+          "basis": "direct",
+          "scenario": null,
+          "pain_point": null,
+          "impact": null,
+          "expected_outcome": null,
+          "keywords": [
+            "国内手机号",
+            "发短信"
+          ],
+          "quote": "国内手机号也能发吗",
+          "context_quote": null
+        }
+      ],
+      "after": [
+        {
+          "product_scope": "uncertain",
+          "aspect": "短信功能",
+          "topic": "国内手机号能否发短信",
+          "kind": "question",
+          "sentiment": "neutral",
+          "basis": "direct",
+          "scenario": null,
+          "pain_point": null,
+          "impact": null,
+          "expected_outcome": null,
+          "keywords": [
+            "国内手机号",
+            "发短信"
+          ],
+          "quote": "国内手机号也能发吗",
+          "context_quote": null
+        }
+      ],
+      "reason": "助手核查：短信讨论对象不明，不能因所在笔记提到 Codex 就把它作为 Codex 功能反馈，保留待确认。"
+    },
+    {
+      "evidence_id": "xhs:6ae2ea7b00000000020121f7",
+      "text": "不行[捂脸R]",
+      "parent_text": "国内手机号也能发吗",
+      "before": [
+        {
+          "product_scope": "target",
+          "aspect": "短信功能",
+          "topic": "国内手机号不能发短信",
+          "kind": "problem",
+          "sentiment": "negative",
+          "basis": "agreement",
+          "scenario": null,
+          "pain_point": "国内手机号无法使用短信功能",
+          "impact": null,
+          "expected_outcome": null,
+          "keywords": [
+            "国内手机号",
+            "不能发短信"
+          ],
+          "quote": "不行[捂脸R]",
+          "context_quote": "国内手机号也能发吗"
+        }
+      ],
+      "after": [
+        {
+          "product_scope": "uncertain",
+          "aspect": "短信功能",
+          "topic": "国内手机号不能发短信",
+          "kind": "problem",
+          "sentiment": "negative",
+          "basis": "agreement",
+          "scenario": null,
+          "pain_point": "国内手机号无法使用短信功能",
+          "impact": null,
+          "expected_outcome": null,
+          "keywords": [
+            "国内手机号",
+            "不能发短信"
+          ],
+          "quote": "不行[捂脸R]",
+          "context_quote": "国内手机号也能发吗"
+        }
+      ],
+      "reason": "助手核查：仅凭对国内手机号提问的“不行”回复，不能确认是 Codex 本身问题，保留待确认。"
+    },
+    {
+      "evidence_id": "xhs:6ae32779000000000f032ec8",
+      "text": "我也是，特别快[哭惹R]",
+      "parent_text": "[捂脸R][捂脸R]",
+      "before": [
+        {
+          "product_scope": "target",
+          "aspect": "重置速度",
+          "topic": "重置速度很快",
+          "kind": "experience",
+          "sentiment": "positive",
+          "basis": "agreement",
+          "scenario": null,
+          "pain_point": null,
+          "impact": null,
+          "expected_outcome": null,
+          "keywords": [
+            "重置速度"
+          ],
+          "quote": "我也是，特别快[哭惹R]",
+          "context_quote": "[捂脸R][捂脸R]"
+        }
+      ],
+      "after": [
+        {
+          "product_scope": "uncertain",
+          "aspect": "重置速度",
+          "topic": "重置速度很快",
+          "kind": "experience",
+          "sentiment": "unknown",
+          "basis": "agreement",
+          "scenario": null,
+          "pain_point": null,
+          "impact": null,
+          "expected_outcome": null,
+          "keywords": [
+            "重置速度"
+          ],
+          "quote": "我也是，特别快[哭惹R]",
+          "context_quote": "[捂脸R][捂脸R]"
+        }
+      ],
+      "reason": "助手核查：父评论只有表情，“特别快”无法确定指额度消耗还是重置，不能标成正面重置体验。"
+    },
+    {
+      "evidence_id": "xhs:6ae37e22000000000d023400",
+      "text": "刚刚给我加了44%的额度，但不是完全重制（？）",
+      "parent_text": null,
+      "before": [
+        {
+          "product_scope": "target",
+          "aspect": "额度政策",
+          "topic": "额度增加44%但非完全重置",
+          "kind": "experience",
+          "sentiment": "mixed",
+          "basis": "direct",
+          "scenario": null,
+          "pain_point": null,
+          "impact": null,
+          "expected_outcome": null,
+          "keywords": [
+            "额度增加",
+            "44%",
+            "非完全重置"
+          ],
+          "quote": "刚刚给我加了44%的额度，但不是完全重制（？）",
+          "context_quote": null
+        }
+      ],
+      "after": [
+        {
+          "product_scope": "target",
+          "aspect": "额度政策",
+          "topic": "额度增加44%但非完全重置",
+          "kind": "experience",
+          "sentiment": "neutral",
+          "basis": "direct",
+          "scenario": null,
+          "pain_point": null,
+          "impact": null,
+          "expected_outcome": null,
+          "keywords": [
+            "额度增加",
+            "44%",
+            "非完全重置"
+          ],
+          "quote": "刚刚给我加了44%的额度，但不是完全重制（？）",
+          "context_quote": null
+        }
+      ],
+      "reason": "助手核查：评论报告额度变化并表示疑惑，未明确表达满意或不满，改为中性。"
+    }
+  ]
+}

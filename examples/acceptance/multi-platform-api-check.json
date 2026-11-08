@@ -1,0 +1,98 @@
+{
+  "data_source": "人工构造的七平台协议验收样本；非平台实采",
+  "platforms": [
+    "xhs",
+    "dy",
+    "ks",
+    "bili",
+    "wb",
+    "tieba",
+    "zhihu"
+  ],
+  "task_id": "5a3f342b-e750-486e-9ad8-b4652c2828b8",
+  "status": "completed",
+  "stats": {
+    "raw": 28,
+    "unique": 21,
+    "duplicates": 7,
+    "included": 21,
+    "excluded": 0,
+    "uncertain": 0,
+    "pending": 0,
+    "notes": 7,
+    "manual_excluded": 0,
+    "platforms": {
+      "bili": {
+        "raw": 4,
+        "unique": 3,
+        "notes": 1,
+        "included": 3,
+        "uncertain": 0
+      },
+      "zhihu": {
+        "raw": 4,
+        "unique": 3,
+        "notes": 1,
+        "included": 3,
+        "uncertain": 0
+      },
+      "wb": {
+        "raw": 4,
+        "unique": 3,
+        "notes": 1,
+        "included": 3,
+        "uncertain": 0
+      },
+      "dy": {
+        "raw": 4,
+        "unique": 3,
+        "notes": 1,
+        "included": 3,
+        "uncertain": 0
+      },
+      "ks": {
+        "raw": 4,
+        "unique": 3,
+        "notes": 1,
+        "included": 3,
+        "uncertain": 0
+      },
+      "tieba": {
+        "raw": 4,
+        "unique": 3,
+        "notes": 1,
+        "included": 3,
+        "uncertain": 0
+      },
+      "xhs": {
+        "raw": 4,
+        "unique": 3,
+        "notes": 1,
+        "included": 3,
+        "uncertain": 0
+      }
+    }
+  },
+  "csv_rows": 21,
+  "csv_included": 21,
+  "evidence_count": 21,
+  "platform_filters": "passed",
+  "exports": [
+    "Markdown",
+    "CSV",
+    "HTML",
+    "JSON"
+  ],
+  "legacy_check": {
+    "historical_tasks": 4,
+    "DeepSeek_status": "completed",
+    "unique": 381,
+    "included": 152,
+    "platforms": [
+      "xhs"
+    ],
+    "report_preserved": true
+  },
+  "temporary_data_directory_removed": true,
+  "main_server_final_check": "7 platform options; latest frontend build; 4 historical completed tasks intact"
+}

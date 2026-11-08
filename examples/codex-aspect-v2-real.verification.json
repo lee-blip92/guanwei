@@ -1,0 +1,54 @@
+{
+  "task_id": "d35989cf-89cd-4198-bd02-10383a115bb1",
+  "source": "用户已有真实采集数据，仅复用分析；未重新采集",
+  "product": "codex",
+  "model": "deepseek-v4-pro",
+  "engine": "absa-2.1",
+  "stats": {
+    "raw": 100,
+    "unique": 100,
+    "duplicates": 0,
+    "included": 46,
+    "excluded": 45,
+    "uncertain": 9,
+    "pending": 0,
+    "notes": 2,
+    "manual_excluded": 0,
+    "platforms": {
+      "xhs": {
+        "raw": 100,
+        "unique": 100,
+        "notes": 2,
+        "included": 46,
+        "uncertain": 9
+      }
+    }
+  },
+  "opinion_count": 46,
+  "generation_mode": "cached_narrative_recount",
+  "provider_issue": "模型调用失败（HTTP 402），请检查后端密钥、模型和 API 地址。",
+  "previous_generated_at": "2026-10-30T10:18:16.654869+00:00",
+  "current_status": "partial",
+  "new_model_call_in_recount": false,
+  "aspect_count": 13,
+  "topic_count": 24,
+  "pain_point_count": 8,
+  "strength_count": 2,
+  "need_count": 2,
+  "evidence_count": 46,
+  "csv_rows": 100,
+  "csv_included": 46,
+  "quote_and_literal_fields_verified": true,
+  "statistics_recomputed": true,
+  "exports_bytes": {
+    "md": 46823,
+    "csv": 136502,
+    "html": 64087,
+    "json": 133245
+  },
+  "audit_removed_candidates": 48,
+  "blank_review_template_rows": 9,
+  "not_accuracy_evaluation": true,
+  "assisted_review_count": 5,
+  "assisted_review_method": "assistant_source_review_not_independent_human_gold"
+}

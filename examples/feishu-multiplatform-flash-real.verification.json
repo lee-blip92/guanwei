@@ -1,0 +1,59 @@
+{
+  "task_id": "27587ab4-ab78-48af-8a42-7e8c41c04feb",
+  "source": "用户已有真实采集数据，仅复用分析；未重新采集",
+  "product": "飞书",
+  "model": "deepseek-flash",
+  "engine": "absa-2.1",
+  "stats": {
+    "raw": 200,
+    "unique": 200,
+    "duplicates": 0,
+    "included": 93,
+    "excluded": 88,
+    "uncertain": 19,
+    "pending": 0,
+    "notes": 7,
+    "manual_excluded": 0,
+    "platforms": {
+      "xhs": {
+        "raw": 100,
+        "unique": 100,
+        "notes": 5,
+        "included": 50,
+        "uncertain": 1
+      },
+      "dy": {
+        "raw": 100,
+        "unique": 100,
+        "notes": 2,
+        "included": 43,
+        "uncertain": 18
+      }
+    }
+  },
+  "opinion_count": 100,
+  "generation_mode": "model_generated",
+  "provider_issue": null,
+  "previous_generated_at": null,
+  "current_status": "partial",
+  "new_model_call_in_recount": null,
+  "aspect_count": 62,
+  "topic_count": 83,
+  "pain_point_count": 22,
+  "strength_count": 19,
+  "need_count": 13,
+  "evidence_count": 93,
+  "csv_rows": 200,
+  "csv_included": 93,
+  "quote_and_literal_fields_verified": true,
+  "statistics_recomputed": true,
+  "exports_bytes": {
+    "md": 111225,
+    "csv": 262663,
+    "html": 146489,
+    "json": 323602
+  },
+  "audit_removed_candidates": 4,
+  "blank_review_template_rows": 9,
+  "not_accuracy_evaluation": true
+}

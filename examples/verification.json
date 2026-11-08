@@ -1,0 +1,22 @@
+{
+  "task_id": "100772e4-aecf-45d4-8875-5edfb569fe57",
+  "source": "D:\\筛选\\md\\data\\xhs\\xhs_search_20261029_203212.xlsx",
+  "source_kind": "real_existing_export",
+  "model_mode": "rules_no_ai_call",
+  "status": "completed",
+  "stats": {
+    "raw": 381,
+    "unique": 381,
+    "duplicates": 0,
+    "included": 144,
+    "excluded": 53,
+    "uncertain": 184,
+    "pending": 0,
+    "notes": 40,
+    "manual_excluded": 0
+  },
+  "themes": 7,
+  "export_rows": 381,
+  "report_evidence_ids_valid": true,
+  "web_url": "http://127.0.0.1:8765/#/tasks/100772e4-aecf-45d4-8875-5edfb569fe57/report"
+}

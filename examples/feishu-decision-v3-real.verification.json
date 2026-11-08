@@ -1,0 +1,62 @@
+{
+  "task_id": "27587ab4-ab78-48af-8a42-7e8c41c04feb",
+  "version": 4,
+  "model": "deepseek-flash",
+  "stats": {
+    "raw": 200,
+    "unique": 200,
+    "duplicates": 0,
+    "included": 79,
+    "excluded": 105,
+    "uncertain": 16,
+    "pending": 0,
+    "notes": 7,
+    "manual_excluded": 0,
+    "platforms": {
+      "xhs": {
+        "raw": 100,
+        "unique": 100,
+        "notes": 5,
+        "included": 44,
+        "uncertain": 1
+      },
+      "dy": {
+        "raw": 100,
+        "unique": 100,
+        "notes": 2,
+        "included": 35,
+        "uncertain": 15
+      }
+    }
+  },
+  "opinion_count": 86,
+  "primary_domains": 6,
+  "secondary_topics": 24,
+  "unmapped_opinions": 0,
+  "known_users": 62,
+  "known_threads": 34,
+  "csv_rows": 200,
+  "csv_included": 79,
+  "quality_checks": 253,
+  "priority_distribution": {
+    "P0": 1,
+    "P1": 1,
+    "P2": 11,
+    "P3": 8
+  },
+  "export_bytes": {
+    "md_brief": 24215,
+    "md_full": 65018,
+    "html_brief": 30465,
+    "html_full": 80184,
+    "csv_brief": 350870,
+    "json_brief": 383556
+  },
+  "statistics_sources_priority_and_literal_evidence_verified": true,
+  "not_independent_accuracy_evaluation": true,
+  "warnings": [
+    "仅离线重算统计与优先级；只保留引用及全部相关观点未变化的旧文案，没有调用模型。",
+    "1 条原始观点复核未通过，未参与决策报告。",
+    "5 条生成表述已移至附录待复核，不作为主文结论。"
+  ]
+}

@@ -1,0 +1,55 @@
+/* The report itself uses decision.css in both the app and standalone export. */
+.report-print-page{margin:0;background:#f6f8f9;padding:24px;color:#30473e}
+.report-print-controls{max-width:1180px;margin:0 auto 20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;font-size:12px}
+.report-print-controls button{padding:10px 18px;background:#13796a;color:white;border-radius:6px}
+.report-print-controls small{width:100%;color:#687c72}
+.report-print-page .decision-report{max-width:1180px}
+.report-print-page .decision-report button{cursor:default}
+.report-print-page .decision-report summary{cursor:default}
+.dr-print-refs{display:block;margin:8px 0;font-size:10px;line-height:1.9;color:#397d62;overflow-wrap:anywhere}
+.dr-print-refs a{color:inherit;text-decoration:underline}
+.dr-print-source{padding:16px 0;border-top:1px solid #e2e9de;overflow-wrap:anywhere;scroll-margin-top:20px}
+.dr-print-source h3{font-size:11px;color:#54734b;margin:0 0 10px}
+.dr-print-source blockquote{margin:0 0 10px;padding:10px 14px;border-left:2px solid #90ad88;background:#f6f9f2;white-space:pre-wrap;font-size:12px;line-height:1.9}
+.dr-print-source p,.dr-print-source a{font-size:10px;line-height:1.9;color:#70815f}
+.report-print-page .dr-section{overflow:visible}
+@page{size:A4;margin:15mm 14mm}
+@media print{
+  .report-print-page{padding:0;margin:0;background:#fff;font-size:10pt}
+  .report-print-controls{display:none!important}
+  .report-print-page *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+  .report-print-page .decision-report{width:100%;max-width:none;border:0;border-radius:0;padding:0;box-shadow:none;font-size:10pt;line-height:1.8}
+  .report-print-page .dr-cover{gap:18px;padding-bottom:20px;break-inside:avoid}
+  .report-print-page .dr-cover-meta{display:flex;min-width:110px}
+  .report-print-page .dr-cover h1{font-size:27px}.report-print-page .dr-cover h1 span{font-size:21px}
+  .report-print-page .dr-section{margin-top:24px;padding-bottom:20px}
+  .report-print-page .dr-section-heading{break-after:avoid;margin-bottom:14px}
+  .report-print-page h2,.report-print-page h3,.report-print-page h4,.report-print-page summary{break-after:avoid}
+  .report-print-page .dr-chart-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin:15px 0;break-inside:avoid}
+  .report-print-page .dr-chart-grid>figure{min-width:0}
+  .report-print-page figure,.report-print-page .dr-findings li,.report-print-page .dr-executive-pair,.report-print-page .dr-actions>div,.report-print-page .dr-print-source{break-inside:avoid}
+  .report-print-page figure{padding:16px}
+  .report-print-page .dr-executive-pair{grid-template-columns:1fr 1fr;gap:22px}
+  .report-print-page .dr-fact-grid{grid-template-columns:1fr 1fr;gap:14px 22px;margin:15px 0}
+  .report-print-page .dr-issue{overflow:visible;break-inside:auto;margin:15px 0}
+  .report-print-page .dr-issue>summary{break-inside:avoid;break-after:avoid;padding:12px}
+  .report-print-page .dr-issue-body{padding:15px}
+  .report-print-page .dr-issue-body>p,.report-print-page .dr-fact-grid,.report-print-page .dr-hypothesis,.report-print-page .dr-issue-evidence{break-inside:avoid}
+  .report-print-page .dr-priority-table{overflow:visible}
+  .report-print-page table{width:100%;table-layout:fixed}
+  .report-print-page thead{display:table-header-group}
+  .report-print-page .dr-priority-table th:nth-child(1){width:10%}.report-print-page .dr-priority-table th:nth-child(2){width:20%}.report-print-page .dr-priority-table th:nth-child(3){width:13%}
+  .report-print-page tr{break-inside:avoid}
+  .report-print-page td,.report-print-page th{padding:8px;overflow-wrap:anywhere}
+  .report-print-page .dr-priority-table ul{min-width:0;padding-left:12px}
+  .report-print-page .dr-priority-table summary{white-space:normal}
+  .report-print-page details>:not(summary){display:block}
+  .report-print-page details>.dr-fact-grid{display:grid}
+  .report-print-page .dr-appendix,.report-print-page .dr-print-evidence{break-before:page}
+  .report-print-page .dr-dimension-row,.report-print-page .dr-sentiment-key{grid-template-columns:110px 1fr 1fr 95px}
+  .report-print-page .dr-bars button>span{width:95px;min-width:0}
+  .report-print-page .dr-sentiment{flex-wrap:wrap;gap:12px;justify-content:center}
+  .report-print-page .dr-donut{width:110px;height:110px}.report-print-page .dr-donut>div{width:82px;height:82px}
+  .report-print-page .dr-matrix svg{max-height:260px}
+  .report-print-page .dr-end{break-inside:avoid}
+}

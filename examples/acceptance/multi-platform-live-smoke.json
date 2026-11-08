@@ -1,0 +1,60 @@
+{
+  "description": "实际抖音极小规模启动检查；不使用协议替身，不主动完成登录/验证",
+  "config": {
+    "platforms": [
+      "dy"
+    ],
+    "product": "飞书",
+    "source": "crawl",
+    "analysis_mode": "rules",
+    "keywords": [
+      "飞书 使用体验"
+    ],
+    "max_notes": 1,
+    "max_comments_per_note": 2,
+    "max_comments": 2
+  },
+  "task_id": "7e069495-c62a-4240-b5e0-6b32cf1eeda8",
+  "observed_status": "waiting_login",
+  "stage": "抖音：采集暂停，请在采集浏览器完成登录/验证，再恢复",
+  "error": null,
+  "stats": {
+    "raw": 0,
+    "unique": 0,
+    "duplicates": 0,
+    "included": 0,
+    "excluded": 0,
+    "uncertain": 0,
+    "pending": 0,
+    "notes": 0,
+    "manual_excluded": 0,
+    "platforms": {}
+  },
+  "platform_runs": [
+    {
+      "task_id": "7e069495-c62a-4240-b5e0-6b32cf1eeda8",
+      "platform": "dy",
+      "status": "waiting_login",
+      "stage": "抖音：采集暂停，请在采集浏览器完成登录/验证，再恢复",
+      "failure_count": 0,
+      "error": null,
+      "updated_at": "2026-10-30T06:19:45.551127+00:00",
+      "name": "抖音",
+      "stats": {
+        "raw": 0,
+        "unique": 0,
+        "included": 0,
+        "uncertain": 0,
+        "notes": 0
+      }
+    }
+  ],
+  "events": [
+    {
+      "kind": "waiting_login",
+      "message": "抖音：采集暂停，请在采集浏览器完成登录/验证，再恢复",
+      "created_at": "2026-10-30T06:19:45.563131+00:00"
+    }
+  ],
+  "final_status": "cancelled"
+}

@@ -1,0 +1,3 @@
+{"kind":"note","note_id":"replace-with-real-note-id","title":"替换为真实笔记标题","desc":"替换为相关正文","note_url":null,"source_keyword":null}
+{"platform":"xhs","comment_id":"replace-with-real-comment-id-1","note_id":"replace-with-real-note-id","text":"替换为真实评论原文","parent_comment_id":null,"parent_text":null,"published_at":null,"like_count":null,"source_url":null,"source_keyword":null,"collected_at":null}
+{"platform":"xhs","comment_id":"replace-with-real-comment-id-2","note_id":"replace-with-real-note-id","text":"替换为真实回复原文","parent_comment_id":"replace-with-real-comment-id-1","parent_text":null,"published_at":null,"like_count":null,"source_url":null,"source_keyword":null,"collected_at":null}

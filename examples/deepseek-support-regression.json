@@ -1,0 +1,47 @@
+{
+  "source": "actual_previous_generated_claims_with_actual_cited_comments",
+  "actual_model_call": true,
+  "check": {
+    "method": "model_self_check_not_human_evaluation",
+    "checked": 3,
+    "retained": 1,
+    "removed": 2,
+    "removed_claims": [
+      {
+        "text": "用户关注飞书文档与内容处理，包括下载飞书妙记导出的文档、重命名云文档、调整标题折叠效果等场景。",
+        "evidence_ids": [
+          "xhs:6a6c24ff000000002b028450",
+          "xhs:6906c53f0000000039020d13",
+          "xhs:6887322e00000000110185fd"
+        ],
+        "section": "findings",
+        "verdict": "unsupported",
+        "reason": "结论声称用户关注下载飞书妙记导出的文档、重命名云文档、调整标题折叠效果等场景，但所引评论均未提及这些具体操作。评论仅涉及文档归属、个人账号使用和请求表格，无法支持该结论。"
+      },
+      {
+        "text": "建议飞书增加删除权限或更明确的提示，防止用户误发消息到公开文档后无法删除。",
+        "evidence_ids": [
+          "xhs:6a6bec990000000004038b5c"
+        ],
+        "section": "recommendations",
+        "verdict": "unsupported",
+        "reason": "结论建议飞书增加删除权限或更明确的提示，防止用户误发消息到公开文档后无法删除。但所引评论仅提到公司说飞书闲聊能被看见，未提及删除权限、误发消息或公开文档，无法支持该建议。"
+      }
+    ]
+  },
+  "retained_claims": {
+    "findings": [
+      {
+        "text": "用户对飞书的监控与隐私存在担忧，包括企业管理员可见性、闲聊被看见、查看他人手机号会提示本人等。",
+        "evidence_ids": [
+          "xhs:6a6c24ff000000002b028450",
+          "xhs:6a6c2d6c00000000090150b5",
+          "xhs:6a6bec990000000004038b5c"
+        ]
+      }
+    ],
+    "positives": [],
+    "recommendations": [],
+    "questions": []
+  }
+}

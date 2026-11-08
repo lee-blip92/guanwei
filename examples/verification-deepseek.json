@@ -1,0 +1,39 @@
+{
+  "checked_at": "2026-10-29T16:52:45.052651+00:00",
+  "task_id": "aae5c2cc-73d3-41a7-819e-fba6d74b7c2b",
+  "model": "deepseek-v4-pro",
+  "source_file": "xhs_search_20261029_203212.xlsx",
+  "source_kind": "real_existing_export",
+  "actual_model_call": true,
+  "stats": {
+    "raw": 381,
+    "unique": 381,
+    "duplicates": 0,
+    "included": 152,
+    "excluded": 223,
+    "uncertain": 6,
+    "pending": 0,
+    "notes": 40,
+    "manual_excluded": 0
+  },
+  "theme_count": 43,
+  "claim_counts": {
+    "findings": 5,
+    "positives": 1,
+    "recommendations": 1,
+    "questions": 4
+  },
+  "export_rows": 381,
+  "all_evidence_ids_exist": true,
+  "all_quotes_match_raw_text": true,
+  "theme_counts_programmatically_verified": true,
+  "quality_accuracy": "not_measured_without_human_gold_labels",
+  "support_check": {
+    "method": "model_self_check_not_human_evaluation",
+    "checked": 20,
+    "retained": 11,
+    "removed": 9
+  },
+  "report_url": "http://127.0.0.1:8765/#/tasks/aae5c2cc-73d3-41a7-819e-fba6d74b7c2b/report",
+  "elapsed_seconds_this_check": 79.0
+}

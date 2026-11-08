@@ -1,0 +1,24 @@
+{
+  "data_mode": "demo",
+  "_source": "人工虚构演示数据，不是小红书真实采集结果；演示无原文链接",
+  "notes": [
+    {"note_id":"demo-n1","title":"飞书刚上手的一周：协作很方便，入口有点多","desc":"试用飞书文档和消息功能，记录自己的使用体验。","source_keyword":"飞书 使用体验"},
+    {"note_id":"demo-n2","title":"飞书更新后的电脑端体验","desc":"这条笔记讨论飞书电脑端更新后的稳定性。","source_keyword":"飞书 问题反馈"},
+    {"note_id":"demo-n3","title":"飞书和钉钉怎么选","desc":"对比飞书与钉钉在文档、通知上的体验。","source_keyword":"飞书 使用场景"}
+  ],
+  "comments": [
+    {"comment_id":"demo-01","note_id":"demo-n1","content":"飞书文档多人一起编辑很方便，不用来回发版本了。","like_count":18},
+    {"comment_id":"demo-02","note_id":"demo-n1","content":"刚用飞书的时候找不到权限设置入口，教程也有点复杂。","like_count":12},
+    {"comment_id":"demo-03","note_id":"demo-n1","content":"我也是","parent_comment_id":"demo-02","like_count":4},
+    {"comment_id":"demo-04","note_id":"demo-n1","content":"手机和电脑同步很省心。","like_count":7},
+    {"comment_id":"demo-05","note_id":"demo-n2","content":"飞书电脑端这次更新后经常卡顿，打开文档一直转圈。","like_count":21},
+    {"comment_id":"demo-06","note_id":"demo-n2","content":"更新后更严重","parent_comment_id":"demo-05","like_count":3},
+    {"comment_id":"demo-07","note_id":"demo-n2","content":"飞书消息通知太多了，重要的提醒反而容易漏掉。","like_count":9},
+    {"comment_id":"demo-08","note_id":"demo-n3","content":"钉钉通知太吵，我已经关掉了。","like_count":5},
+    {"comment_id":"demo-09","note_id":"demo-n3","content":"这个确实不太好用。","like_count":1},
+    {"comment_id":"demo-10","note_id":"demo-n1","content":"飞书会员代充，加微优惠，私信购买。","like_count":0},
+    {"comment_id":"demo-11","note_id":"demo-n1","content":"蹲","like_count":0},
+    {"comment_id":"demo-12","note_id":"demo-n1","content":"飞书搜索历史文档不太方便，但协作功能很好用。","like_count":6},
+    {"comment_id":"demo-01","note_id":"demo-n1","content":"飞书文档多人一起编辑很方便，不用来回发版本了。","like_count":18,"source_keyword":"飞书 好用"}
+  ]
+}

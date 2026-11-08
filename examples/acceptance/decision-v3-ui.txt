@@ -1,0 +1,1 @@
+PASS: real V3 report, brief/full modes, dynamic taxonomy charts, denominators, research priorities, all evidence index, original evidence drawer, independent research axes and export variants (read-only jsdom + real API)
